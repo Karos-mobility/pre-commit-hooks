@@ -14,7 +14,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     retcode = 0
     for filename in args.filenames:
-        with open(filename, 'rb') as inputfile:
+        with open(filename, 'r') as inputfile:
             for i, line in enumerate(inputfile, start=1):
                 if PATTERN.match(line) is not None:
                     print(
