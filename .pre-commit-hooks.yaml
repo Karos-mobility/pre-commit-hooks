@@ -1,0 +1,6 @@
+-   id: check-import-datetime
+    name: check python datetime module import
+    description: checks for import datetime in python source.
+    entry: check-import-datetime
+    language: python
+    types: [python]
