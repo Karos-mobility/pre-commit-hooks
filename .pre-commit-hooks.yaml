@@ -11,3 +11,12 @@
     entry: check-import-unittest-testcase
     language: python
     types: [python]
+
+-   id: check-branch-name
+    name: validate branch name against the Karos convention
+    description: checks the current branch matches <type>/<JIRA-ID>-<desc>.
+    entry: check-branch-name
+    language: python
+    stages: [pre-push]
+    always_run: true
+    pass_filenames: false
