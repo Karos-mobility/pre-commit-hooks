@@ -7,7 +7,7 @@ from typing import Sequence
 
 TYPES = "feat|fix|refactor|chore|test|docs|ci|build|perf|hotfix"
 PROJECTS = "CE|CG|CS|GB|GS|GM|GF"
-PATTERN = re.compile(rf"^({TYPES})/((({PROJECTS})-[0-9]+)|NOJIRA)-.+")
+PATTERN = re.compile(rf"^({TYPES})/((({PROJECTS})-[0-9]+)|NOJIRA)-.+", re.IGNORECASE)
 
 # Branches that should never be validated: a detached HEAD, the protected
 # branches, and the throwaway names the merge queue creates.
