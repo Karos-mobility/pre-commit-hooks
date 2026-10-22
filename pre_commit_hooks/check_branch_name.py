@@ -10,9 +10,10 @@ PROJECTS = "CE|CG|CS|GB|GS|GM|GF"
 PATTERN = re.compile(rf"^({TYPES})/((({PROJECTS})-[0-9]+)|NOJIRA)-.+", re.IGNORECASE)
 
 # Branches that should never be validated: a detached HEAD, the protected
-# branches, and the throwaway names the merge queue creates.
-SKIP_EXACT = {"HEAD", "master", "main", "production"}
-SKIP_PREFIXES = ("gh-readonly-queue/",)
+# branches, the deploy branch, the throwaway names the merge queue creates,
+# and the generated revert and dependabot branches.
+SKIP_EXACT = {"HEAD", "master", "main", "production", "deploy-to-prod"}
+SKIP_PREFIXES = ("gh-readonly-queue/", "revert-", "dependabot/")
 
 
 def main(argv: Sequence[str] | None = None) -> int:
