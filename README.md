@@ -12,7 +12,7 @@ Add this to your `.pre-commit-config.yaml`
 
 ```yaml
 -   repo: https://github.com/Karos-mobility/pre-commit-hooks.git
-    rev: v0.3.1  # Use the ref you want to point at
+    rev: v0.3.2  # Use the ref you want to point at
     hooks:
     -   id: check-import-datetime
     -   id: check-import-unittest-testcase
